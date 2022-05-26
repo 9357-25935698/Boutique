@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>{% block title %} Ma Boutique {% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+
+        
+        
+        {% block stylesheets %}
+            {#{ encore_entry_link_tags('app') }#}
+            <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="assets/css/templatemo.css">
+            <link rel="stylesheet" href="assets/css/custom.css">
+            {# Load fonts style after rendering the layout styles #}
+            
+            <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+            
+        {% endblock %}
+    
+    </head>
+
+    <body>
+        
+        {#  Start Top Nav #}   
+        {{ include('Layouts/Partials/start_top_nav.html.twig') }}
+        
+        {# Modal #} 
+        {{ include('Layouts/Partials/modal.html.twig') }} 
+
+        
+        
+        {# Page About#}
+        {{include ('Layouts/Partials/about.html.twig')}}
+        
+        
+        
+        
+        {% block body %}
+
+        {% endblock %}
+        {# Footer #}  
+        {{ include('Layouts/Partials/footer.html.twig') }}
+
+        
+        {% block javascripts %}
+            {#{ encore_entry_script_tags('app') }#}
+              <# Start Script #>
+              <script src="assets/js/jquery-1.11.0.min.js"></script>
+              <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+              <script src="assets/js/bootstrap.bundle.min.js"></script>
+              <script src="assets/js/templatemo.js"></script>
+              <script src="assets/js/custom.js"></script>
+    
+        {% endblock %}
+    </body>
+</html>
